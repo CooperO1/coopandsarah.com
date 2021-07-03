@@ -1,0 +1,132 @@
+html, body {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    scroll-behavior: smooth;
+  }
+  
+.menu-bar {
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    z-index: 2;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navigation ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+.welcome-div {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Righteous;
+    color: black;
+}
+
+a:hover{
+    color: rgb(95, 184, 142);
+}
+
+#puggle-image {
+    object-fit: contain;
+}
+
+#welcome-title{
+    font-family: Amatic SC;
+    font-size: 4vw;
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#welcome-subtitle {
+    font-family: Cookie;
+    font-style: italic;
+    font-size: 2.5vw;
+    color: white;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#head-image {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    filter: brightness(75%)
+}
+
+#hotel-background {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+#events {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#accommodations {
+    display: flex;
+    width: 100%;
+}
+
+#hotel-cell{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+}
+
+.section-titles {
+    font-family: Amatic SC;
+    font-size: 58px;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-underline-offset: 10px;
+}
+
+#hotel-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+#hotel-title {
+    font-family: Amatic SC;
+    font-size: 58px;
+    color: white;
+}
+
+.hotel-subtitle {
+    font-family: Righteous;
+    color: rgb(95, 184, 142);
+    font-size: 15px;
+}

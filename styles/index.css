@@ -19,6 +19,11 @@ html, body {
     border-bottom:  .1vw solid black;
 }
 
+/* #### Mobile Phones Portrait or Landscape #### */
+@media screen and (max-device-width: 640px){
+    /* some CSS here */
+  }
+
 .navigation ul{
     list-style: none;
     margin: 0;
@@ -31,6 +36,7 @@ html, body {
 
 .welcome-div {
     width: 100%;
+    height: 80vh;
 }
 
 a {
@@ -53,6 +59,15 @@ a:hover{
     font-size: 4vw;
     color: white;
     position: absolute;
+    top: 13vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+#and{
+    font-family: Amatic SC;
+    font-size: 4vw;
+    color: #B51A3A;
     top: 13vh;
     left: 50vw;
     transform: translate(-50%, -50%);
@@ -162,8 +177,17 @@ a:hover{
     background: #e6c3b1;
 }
 
+#things-to-do {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #venues {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -275,7 +299,70 @@ a:hover{
     height: 100%; 
     object-fit: cover;
     opacity: 0.5;
-    filter: brightness(60%)
+    filter: brightness(50%)
+}
+
+#reception-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    top: 35%;
+    width: 80%;
+    height: 20%;
+    gap: 10%;
+}
+
+#reception-title {
+    font-family: Amatic SC;
+    font-size: 4vw;
+    color: white;
+    margin: 10% 0 0 0;
+}
+
+.reception-subtitle {
+    font-family: Righteous;
+    color: white;
+    font-size: 1vw;
+    margin: 0;
+}
+
+#reception-directions-button {
+    padding: 0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border:0.16em solid rgba(255,255,255,0);
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:Righteous,sans-serif;
+    font-weight:300;
+    font-size: 1.2vw;
+    width: 10vw;
+    color:#FFFFFF;
+    background-color: #e6c3b1;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    text-align:center;
+    transition: all 0.2s;
+}
+#reception-directions-button:hover{
+    background-color: #d6a259;
+}
+#reception-directions-button:hover span{
+    display: none;
+}
+
+#reception-directions-button:hover:before{
+    content:"PARTY!"
+}
+
+#faq {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 

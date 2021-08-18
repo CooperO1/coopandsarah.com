@@ -59,7 +59,44 @@ a:hover{
     align-items: center;
 }
 
+.timeline {
+    position: relative;
+    max-width: 1200px;
+}
 
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: .8vw;
+    background-color: #d6a259;
+    top: 0;
+    bottom: 0;
+    left: 8.4vw
+}
+
+.container {
+    position: relative;
+    background-color: inherit;
+    padding-left: 17%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    background-color: white;
+    border: .8vw solid #d6a259;
+    top: 0;
+    left: 7vw;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.content{
+    font-family: Righteous;
+    font-size: 1.5vw;
+}
 
 #accommodations {
     display: flex;
@@ -80,7 +117,7 @@ a:hover{
 
 .section-titles {
     font-family: Amatic SC;
-    font-size: 4vw;
+    font-size: 6vw;
     text-decoration-line: underline;
     text-decoration-style: wavy;
     text-underline-offset: 10px;
@@ -431,26 +468,26 @@ a:hover{
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
-      }
+    }
       
-      .dropdown-content a {
+    .dropdown-content a {
         float: none;
         color: black;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
         text-align: left;
-      }
+    }
       
-      .dropdown-content a:hover {
+    .dropdown-content a:hover {
         background-color: #ddd;
-      }
+    }
       
-      .dropdown:hover .dropdown-content {
+    .dropdown:hover .dropdown-content {
         display: block;
-      }
+     }
 
-      a {
+    a {
         text-decoration: none;
         font-size: 1.3vh;
         font-family: Righteous;
@@ -503,12 +540,18 @@ a:hover{
         text-align:center;
         transition: all 0.2s;
     }
+
     .section-titles {
         font-family: Amatic SC;
         font-size: 11vw;
         text-decoration-line: underline;
         text-decoration-style: wavy;
         text-underline-offset: 10px;
+    }
+
+    .content{
+        font-family: Righteous;
+        font-size: 4vw;
     }
 
     #venues {

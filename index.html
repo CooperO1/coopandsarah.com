@@ -13,34 +13,109 @@
 <body>
     <div class="menu-bar">
         <nav class="navigation">
-            <ul>
-                <li><img id="puggle-image" src="images/puggle-image.jpg"></li>
-                <li><a href="#events">EVENTS OF THE DAY</a></li>
-                <li><a href="#accommodations">ACCOMMODATIONS</a></li>
-                <li><a href="#things-to-do">THINGS TO DO</a></li>
-                <li><a href="#venues">CEREMONY/RECEPTION</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><img id="puggle-image" src="images/puggle-image-right.jpg"></li>
-            </ul>
+                <img id="puggle-image" src="images/puggle-image.jpg">
+                <a href="#events">EVENTS OF THE DAY</a>
+                <a href="#accommodations">ACCOMMODATIONS</a>
+                <a href="#things-to-do">THINGS TO DO</a>
+                <a href="#venues">CEREMONY/RECEPTION</a>
+                <a href="#faq">FAQ</a>
+                <img id="puggle-image" src="images/puggle-image-right.jpg">
         </nav> 
+        <nav class = "navigation-mobile">
+            <img id="puggle-image" src="images/puggle-image.jpg">
+            <div class="dropdown">
+                <button class="dropbtn">MENU <span id="arrow">&#9660</span>  
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#events">EVENTS OF THE DAY</a>
+                    <a href="#accommodations">ACCOMMODATIONS</a>
+                    <a href="#things-to-do">THINGS TO DO</a>
+                    <a href="#venues">CEREMONY/RECEPTION</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+              </div> 
+              <img id="puggle-image" src="images/puggle-image-right.jpg">
+        </nav>
     </div>
     <div class="welcome-div">
         <img id="head-image" src="images/head-image.jpg">
-        <h1 id="welcome-title">SARAH GALLAHAN <span id="and">&</span> COOPER OMUNDSON</h1>
-        <h3 id="welcome-subtitle">are getting married march 19th, 2022 in Dallas</h3>
+        <div id="welcome-text">
+            <h1 id="welcome-title">SARAH GALLAHAN <span id="and">&</span> COOPER OMUNDSON</h1>
+            <h3 id="welcome-subtitle">are getting married march 19th, 2022 in Dallas</h3>
+        </div>
+    </div>
+    <div class="welcome-div-mobile">
+        <img id="head-image" src="images/head-image.jpg">
+        <div id="welcome-text">
+            <div id="sarah-and-cooper">
+                <p id="welcome-title">SARAH <span id="and">&</span> COOPER</p>
+            </div>
+            <p id="welcome-subtitle1">are getting married</p>
+            <p id="welcome-subtitle2">march 19th, 2022 in Dallas</p>
+        </div>
     </div>
     <div id="events">
         <h1 class="section-titles">EVENTS OF THE DAY</h1>
         <br>
-        <h3>Coming Soon..</h3>
     </div>
+    <div class="timeline">
+        <div class="container right">
+            <div class="content">
+                <h2>9:00 am</h2>
+                <p>Bus leaves from DoubleTree Hotel to the Arboretum.</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>10:00 am</h2>
+                <p>Sarah and Cooper get hitched!</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>12:00 pm</h2>
+                <p>Return bus departs Arboretum.</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>1:00 pm</h2>
+                <p>Luncheon at hotel.</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>5:00 pm</h2>
+                <p>Reception at Peticolas Brewery.</p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>9:00 pm</h2>
+                <p>Closing time. One last call for alcohol so finish your whiskey or beer. </p>
+            </div>
+        </div>
+    </div>
+    <br>
     <div id="accommodations">
         <div id="hotel-cell">
             <img id="hotel-background" src="images/hotel-background.jpg">
             <div id="hotel-title-container">
-                <h1 id="hotel-title">DOUBLE TREE MARKET CENTER</h1>
-                <p class="hotel-subtitle">2015 MARKET CENTER BLVD, DALLAS, TX 75207 - (214) 741-7481</p>
-                <p class="hotel-subtitle">We have a block of rooms at a perferred rate with the Double Tree</p>
+                <h1 id="hotel-title">DOUBLETREE MARKET CENTER</h1>
+                <p class="hotel-subtitle">2015 MARKET CENTER BLVD, DALLAS, TX 75207  -  (214) 741-7481</p>
+                <p class="hotel-subtitle">A block of rooms has been reserved at a perferred rate.</p>
+                <a href="https://doubletree.hilton.com/en/dt/groups/personalized/D/DALMKDT-GOW-20220317/index.jhtml?WT.mc_id=POG" 
+                target="_blank"><button id="hotel-button">BOOK A HOTEL</button></a>
+            </div>
+        </div>
+        <div id="hotel-cell-mobile">
+            <img id="hotel-background" src="images/hotel-background.jpg">
+            <div id="hotel-title-container">
+                <h1 id="hotel-title">DOUBLETREE MARKET CENTER</h1>
+                <p class="hotel-subtitle">2015 MARKET CENTER BLVD, DALLAS, TX 75207</p> 
+                <p class="hotel-subtitle">(214) 741-7481</p>
+                <p class="hotel-subtitle">A block of rooms has been reserved at a perferred rate.</p>
                 <a href="https://doubletree.hilton.com/en/dt/groups/personalized/D/DALMKDT-GOW-20220317/index.jhtml?WT.mc_id=POG" 
                 target="_blank"><button id="hotel-button">BOOK A HOTEL</button></a>
             </div>
@@ -50,6 +125,7 @@
         <h1 class="section-titles">THINGS TO DO</h1>
         <br>
         <h3>Coming Soon..</h3>
+        <br>
     </div>
 
     <div id="venues">
@@ -57,7 +133,7 @@
             <img id="ceremony-background" src="images/gardens-fall-wide.jpg">
             <div id="ceremony-text-container">
                 <h1 id="ceremony-title">DALLAS ARBORETUM</h1>
-                <p class="ceremony-subtitle">The ceremony will be at the Nancy Rutchik Red Maple Rill @ 10:00 a.m.</p>
+                <p class="ceremony-subtitle">The ceremony will be at the Nancy Rutchik Red Maple Rill at 10:00 am</p>
                 <div id="button-container">
                     <a href="https://www.dallasarboretum.org/visitor-information/gardens-and-pavilions/garden-map/" 
                     target="_blank"><button id="ceremony-map-button">MAP</button></a>
@@ -70,8 +146,8 @@
             <img id="reception-background" src="images/beer_peticolas_2.jpg">
             <div id="reception-text-container">
                 <h1 id="reception-title">PETICOLAS BREWERY</h1>
-                <p class="reception-subtitle">The reception venue is just a short walk from the Double Tree Hotel</p>
-                <p class="reception-subtitle">The party begins at @ 5:00 p.m.!!</p>
+                <p class="reception-subtitle">The reception will be held in the Grain Room at the brewery which is just a short walk from the DoubleTree Hotel</p>
+                <p class="reception-subtitle">The party begins at at 5:00 pm!!</p>
                 <a href="https://www.google.com/maps/dir/DoubleTree+by+Hilton+Hotel+Dallas+-+Market+Center,+Market+Center+Boulevard,+Dallas,+TX/Peticolas+Brewing+Company+Taproom,+Pace+Street,+Dallas,+TX/@32.7961316,-96.8286107,17z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x864e995204cafbe3:0x6954a6d0725c249c!2m2!1d-96.825984!2d32.7974536!1m5!1m1!1s0x864e99515a24dee5:0x6a80601e1b64f37b!2m2!1d-96.8290049!2d32.7968036!3e2" 
                     target="_blank"><button id="reception-directions-button"><span>DIRECTIONS</span></button></a>
             </div>

@@ -184,7 +184,6 @@ a:hover{
 
 #venues {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -715,7 +714,7 @@ a:hover{
 @media screen and (min-device-width: 641px){
     .welcome-div {
         width: 100%;
-        height: 80vh;
+        height: 100vh;
     }
 
     #welcome-title{
@@ -767,6 +766,11 @@ a:hover{
         font-size: 1.3vw;
         font-family: Righteous;
         color: black;
+    }
+    
+    #venues {
+        display: flex;
+        width: 100%;
     }
 
     .question {

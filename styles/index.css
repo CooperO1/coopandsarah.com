@@ -26,7 +26,7 @@ html, body {
 
 .welcome-div {
     width: 100%;
-    height: 100vh;
+    height: 48vw;
 }
 
 a:hover{
@@ -714,7 +714,7 @@ a:hover{
 @media screen and (min-device-width: 641px){
     .welcome-div {
         width: 100%;
-        height: 100vh;
+        height: 48vw;
     }
 
     #welcome-title{

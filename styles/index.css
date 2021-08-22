@@ -691,6 +691,23 @@ a:hover{
         text-align:center;
         transition: all 0.2s;
     }
+
+    .question {
+    font-family: Amatic SC;
+    color: #e6c3b1;
+    font-size: 7vw;
+    text-align: center;
+    margin-bottom: 0px;
+    }
+
+    .answer {
+    color: #524949;
+    font-family: Righteous;
+    font-size: 4vw;
+    text-align: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    }
 }
 
 /* ###################### Desktop sizing ############################# */
@@ -750,6 +767,22 @@ a:hover{
         font-size: 1.3vw;
         font-family: Righteous;
         color: black;
+    }
+
+    .question {
+    font-family: Amatic SC;
+    color: #e6c3b1;
+    font-size: 4vw;
+    margin-bottom: 0px;
+    }
+
+    .answer {
+    color: #524949;
+    font-family: Righteous;
+    font-size: 2vw;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
     }
 }
 

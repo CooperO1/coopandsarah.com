@@ -12,14 +12,78 @@
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <link href='https://unpkg.com/swiper/swiper-bundle.min.css' rel='stylesheet'>
+    <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
+    
+    <script src='scripts/index.js'></script>
 </head>
 <body>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+        import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDCO9wuPxoV7V5PXHGmbbofVraJv9e923M",
+            authDomain: "wedding-site-4c66f.firebaseapp.com",
+            projectId: "wedding-site-4c66f",
+            storageBucket: "wedding-site-4c66f.appspot.com",
+            messagingSenderId: "1022142215527",
+            appId: "1:1022142215527:web:ecd6aad50d706f7badebc2",
+            measurementId: "G-EGJ44W9XPM"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        var attendingButton = document.getElementById("attendingButton");
+
+        attendingButton.onclick = function() {
+            const db = getDatabase();
+            set(ref(db, document.getElementById("fullName").value), {
+                username: document.getElementById("fullName").value,
+                isAttending: "Yes",
+                numOfGuests: document.getElementById("numOfGuests").value
+            });
+            var rsvpModal = document.getElementById("rsvpModal");
+            rsvpModal.style.display = "none";
+            var attendingModal = document.getElementById("attendingModal");
+            attendingModal.style.display = "block";
+        }
+
+        var notAttendingButton = document.getElementById("notAttendingButton");
+
+        notAttendingButton.onclick = function() {
+            const db = getDatabase();
+            set(ref(db, document.getElementById("fullName").value), {
+                username: document.getElementById("fullName").value,
+                isAttending: "No",
+                numOfGuests: 0,
+            });
+            var rsvpModal = document.getElementById("rsvpModal");
+            rsvpModal.style.display = "none";
+            var notAttendingModal = document.getElementById("notAttendingModal");
+            notAttendingModal.style.display = "block";
+        }
+
+        var span_attending = document.getElementsByClassName("close")[1];
+
+        span_attending.onclick = function() {
+            attendingModal.style.display = "none";
+        }
+        var span_notAttending = document.getElementsByClassName("close")[2];
+
+        span_notAttending.onclick = function() {
+            notAttendingModal.style.display = "none";
+        }
+
+    </script> 
+    
     <div class="menu-bar">
         <nav class="navigation">
                 <img id="puggle-image" src="images/puggle-image.jpg">
                 <a href="#events">EVENTS OF THE DAY</a>
                 <a href="#accommodations">ACCOMMODATIONS</a>
-                <a href="#things-to-do">THINGS TO DO</a>
+                <a href="#things-to-do-title">THINGS TO DO</a>
                 <a href="#venues">CEREMONY/RECEPTION</a>
                 <a href="#faq">FAQ</a>
                 <img id="puggle-image" src="images/puggle-image-right.jpg">
@@ -41,15 +105,53 @@
               <img id="puggle-image" src="images/puggle-image-right.jpg">
         </nav>
     </div>
+    <div id="rsvpModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="modal-content-input">
+            <h1 id="rsvpTitle">RSVP</h1>
+            <input type="text" id="fullName" class="rsvpInput" name="firstname" placeholder="Your full name..">
+            <input type="text" id="numOfGuests" class="rsvpInput" name="firstname" placeholder="# of guests (including yourself)..">
+          </div>
+          <div id="rsvpButtons">
+            <button id="attendingButton" class="rsvpInputButton">ATTENDING</button>
+            <button id="notAttendingButton" class="rsvpInputButton">NOT ATTENDING</button>
+          </div>
+        </div>
+      
+    </div>
+
+    <div id="attendingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-content-input">
+                <h1 id="attendingResponse">Submission Successful!</h1>
+                <h1 id="attendingResponse">Thanks, we can't wait to see you there!</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="notAttendingModal" class="modal">
+        <div class="modal-content">
+            <span id="notAttendingClose" class="close">&times;</span>
+            <div class="modal-content-input">
+                <h1 id="attendingResponse">Submission Successful!</h1>
+                <h1 id="attendingResponse">Thanks, sorry you won't be able to make it!</h1>
+            </div>
+        </div>
+    </div>
     <div class="welcome-div">
-        <img id="head-image" src="images/head-image.jpg">
+        <img id="head-image" src="images/airstream.jpg">
         <div id="welcome-text">
             <h1 id="welcome-title">SARAH GALLAHAN <span id="and">&</span> COOPER OMUNDSON</h1>
             <h3 id="welcome-subtitle">are getting married march 19th, 2022 in Dallas</h3>
+            <button id="rsvpButton">RSVP</button>
         </div>
     </div>
     <div class="welcome-div-mobile">
-        <img id="head-image" src="images/head-image.jpg">
+        <img id="head-image" src="images/titleImage.jpg">
         <div id="welcome-text">
             <div id="sarah-and-cooper">
                 <p id="welcome-title">SARAH <span id="and">&</span> COOPER</p>
@@ -57,6 +159,7 @@
             <p id="welcome-subtitle1">are getting married</p>
             <p id="welcome-subtitle2">march 19th, 2022 in Dallas</p>
         </div>
+        <button id="rsvpButton-mobile">RSVP</button>
     </div>
     <div id="events">
         <h1 class="section-titles">EVENTS OF THE DAY</h1>
@@ -124,13 +227,39 @@
             </div>
         </div>
     </div>
-    <div id="things-to-do">
-        <h1 class="section-titles">THINGS TO DO</h1>
-        <br>
-        <h3>Coming Soon..</h3>
-        <br>
+    <div class="swiper mySwiper">
+        <h1 id="things-to-do-title">THINGS TO DO</h1>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img class="icons" src="images/beer.png"/>
+                <h1 class="todo-titles">BREWERIES</h1>
+                <a class="todo-links" href="https://manhattanproject.beer/">Manhattan Project</a>
+                <a class="todo-links" href="https://communitybeer.com/">Community Beer Co.</a>
+                <a class="todo-links" href="http://braindeadbrewing.com/">Braindead Brewing</a>
+                <a class="todo-links" href="https://www.pegasuscitybrewery.com/">Pegasus City Brewery.</a>
+            </div>
+            <div class="swiper-slide">
+                <img class="icons" src="images/restaurant.png"/>
+                <h1 class="todo-titles">FOOD</h1>
+                <a class="todo-links" href="https://ascension.coffee/">Ascension Coffee</a>
+                <a class="todo-links" href="https://mothinthe.net/">The Meddlesome Moth</a>
+                <a class="todo-links" href="https://www.rodeogoat.com/dallas/">Rodeo Goat</a>
+                <a class="todo-links" href="https://www.delucca.com/">De Lucca</a>
+            
+            </div>
+            <div class="swiper-slide">
+                <img class="icons" src="images/popcorn.png"/>
+                <h1 class="todo-titles">AMUSEMENT / LEISURE</h1>
+                <a class="todo-links" href="https://www.medievaltimes.com/">Medieval Times</a>
+                <a class="todo-links" href="https://www.cidercade.com/">Cidercade Dallas</a>
+                <a class="todo-links" href="https://www.bishopartsdistrict.com/">Bishop Arts District</a>
+                <a class="todo-links" href="https://bowlounge.com/">Bowlounge</a>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
-
     <div id="venues">
         <div id="ceremony-cell">
             <img id="ceremony-background" src="images/gardens-fall-wide.jpg">
@@ -194,7 +323,7 @@
         <h3 class="question">Can kids go to the brewery?</h3>
         <p class = "answer">Yes!</p>
         <h3 class="question">What's for dinner?</h3>
-        <p class="answer">Tacos, beer, wine, and cake.</p>
+        <p class="answer">Fajitas, beer, wine, and cake. (Vegan options available)</p>
         <h3 class="question">Who created this awesome website?</h3>
         <p class="answer">Cooper was the chief designer and developer. Sarah helped marginally.</p>
         <h3 class="question">What if I really want to get you a gift?</h3>

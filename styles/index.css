@@ -26,7 +26,7 @@ html, body {
 
 .welcome-div {
     width: 100%;
-    height: 48vw;
+    height: 100vw;
 }
 
 a:hover{
@@ -41,7 +41,7 @@ a:hover{
     width: 100%;
     height: 100%; 
     object-fit: cover;
-    filter: brightness(75%)
+    filter: brightness(90%)
 }
 
 #hotel-background {
@@ -180,6 +180,56 @@ a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#things-to-do-title {
+    position: absolute;
+    font-family: Amatic SC;
+    font-size: 6vw;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-underline-offset: 10px;
+    z-index: 2;
+    margin-top: 0%;
+}
+
+.swiper {
+    width: 100%;
+    height: 50vw;
+    background-color: #e6c3b1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0%;
+  }
+
+.icons {
+    width: 6%;
+    margin-top: 1%;
+}
+
+.todo-titles {
+    font-family: Amatic SC;
+    font-size: 4vw;
+    color: #e6c3b1;
+    margin-top: 0%;
+}
+
+.todo-links {
+    text-decoration: underline;
+    margin: 0 0 .5% 0;
 }
 
 #venues {
@@ -378,7 +428,7 @@ a:hover{
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 130vw;
+        height: 150vw;
         gap: 10%;
     }
 
@@ -424,6 +474,112 @@ a:hover{
         font-size: 6vw;
         color: white;
         margin: 0;
+    }
+
+    #rsvpButton-mobile {
+        position:absolute;
+        top: 90%;
+        border-radius: 2em;
+        border:0.16em solid rgba(255,255,255,0);
+        padding: 0.25em 0.75em;
+        background-color: #e6c3b1;
+        color:#FFFFFF;
+        font-family:Righteous,sans-serif;
+        font-weight:300;
+        font-size: 4vw;
+        width: 25vw;
+    }
+
+    #rsvpButton-mobile:hover {
+        background: #d6a259;
+    }
+
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 3; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* Modal Content/Box */
+    .modal-content-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    #rsvpTitle {
+        font-family:Righteous,sans-serif;
+        font-size: 6vh;
+    }
+
+    .rsvpInput {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 3vh;
+    }
+  
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #rsvpButtons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2vh;
+    }
+
+    .rsvpInputButton {
+        border-radius: 2em;
+        border:0.16em solid rgba(255,255,255,0);
+        padding: 0.25em 0.75em;
+        background-color: #e6c3b1;
+        color:#FFFFFF;
+        font-family:Righteous,sans-serif;
+        font-weight:300;
+        font-size: 7vw;
+        width: 70vw;
+    }
+
+    .rsvpInputButton:hover {
+        background: #d6a259;
     }
 
     .navigation{
@@ -538,6 +694,44 @@ a:hover{
         text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
         text-align:center;
         transition: all 0.2s;
+    }
+
+    #things-to-do-title {
+        position: absolute;
+        font-family: Amatic SC;
+        font-size: 11vw;
+        text-decoration-line: underline;
+        text-decoration-style: wavy;
+        text-underline-offset: 10px;
+        z-index: 2;
+        margin-top: 0%;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 160vw;
+        background-color: #e6c3b1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icons {
+        width: 20%;
+        margin-top: 0%;
+    }
+    
+    .todo-titles {
+        font-family: Amatic SC;
+        font-size: 9vw;
+        color: #e6c3b1;
+        margin-top: 0%;
+    }
+    
+    .todo-links {
+        text-decoration: underline;
+        font-size: 4vw;
+        margin: 0 0 2% 0;
     }
 
     .section-titles {
@@ -713,8 +907,13 @@ a:hover{
 
 @media screen and (min-device-width: 641px){
     .welcome-div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        height: 48vw;
+        height: 55vw;
     }
 
     #welcome-title{
@@ -722,9 +921,9 @@ a:hover{
         font-size: 4vw;
         color: white;
         position: absolute;
-        top: 13vh;
+        top: 10vh;
         left: 50vw;
-        transform: translate(-50%, -50%);
+        transform: translate(-44%, -50%);
     }
     
     #and{
@@ -733,7 +932,7 @@ a:hover{
         color: #B51A3A;
         top: 13vh;
         left: 50vw;
-        transform: translate(-50%, -50%);
+        transform: translate(-44%, -50%);
     }
     
     #welcome-subtitle {
@@ -742,9 +941,115 @@ a:hover{
         font-size: 2.5vw;
         color: white;
         position: absolute;
-        top: 20vh;
+        top: 16vh;
         left: 50vw;
-        transform: translate(-50%, -50%);
+        transform: translate(-44%, -50%);
+    }
+
+    #rsvpButton {
+        position:absolute;
+        top: 90%;
+        border-radius: 2em;
+        border:0.16em solid rgba(255,255,255,0);
+        padding: 0.25em 0.75em;
+        transform: translate(-44%, -50%);
+        background-color: #e6c3b1;
+        color:#FFFFFF;
+        font-family:Righteous,sans-serif;
+        font-weight:300;
+        font-size: 2vw;
+        width: 13vw;
+    }
+
+    #rsvpButton:hover {
+        background: #d6a259;
+    }
+
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 3; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* Modal Content/Box */
+    .modal-content-input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+  
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #rsvpTitle {
+        font-family:Righteous,sans-serif;
+        font-size: 6vh;
+    }
+
+    .rsvpInput {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 3vh;
+    }
+
+    #rsvpButtons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2vh;
+    }
+
+    .rsvpInputButton {
+        border-radius: 2em;
+        border:0.16em solid rgba(255,255,255,0);
+        padding: 0.25em 0.75em;
+        background-color: #e6c3b1;
+        color:#FFFFFF;
+        font-family:Righteous,sans-serif;
+        font-weight:300;
+        font-size: 3vh;
+        width: 40vh;
+    }
+
+    .rsvpInputButton:hover {
+        background: #d6a259;
     }
 
     .navigation-mobile{
